@@ -2,13 +2,13 @@
   fetch('./broken_database_1.json')
   .then(r => r.json())
   .then(json => {
-    json.forEach(objeto_jason => {
+    json.forEach(jason => {
       // Corrigir nome do carro
-      objeto_jason.nome = objeto_jason.nome.replace(/æ/g, 'a').replace(/ø/g, 'o');
+      jason.nome = jason.nome.replace(/æ/g, 'a').replace(/ø/g, 'o');
 
       // Corrigir valor das vendas
       if (typeof objeto_jason.vendas === 'string') {
-        objeto_jason.vendas = parseInt(objeto_jason.vendas, 10);
+        jason.vendas = parseInt(jason.vendas, 10);
       }
     });
 
