@@ -2,9 +2,9 @@
 fetch('./broken_database_2.json')
 .then(r => r.json())
 .then(json => {
-  json.forEach(objeto_jason => {
+  json.forEach(jason => {
     // Corrigir nome da marca
-    objeto_jason.marca = objeto_jason.marca.replace(/æ/g, 'a').replace(/ø/g, 'o');
+    jason.marca = jason.marca.replace(/æ/g, 'a').replace(/ø/g, 'o');
   });
 });
 
